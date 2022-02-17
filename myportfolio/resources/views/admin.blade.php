@@ -18,33 +18,12 @@
         <style>
             body {
                 font-family: 'Caveat Brush';
-                background-image: url("https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+                /*background-image: url("https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");*/
             }
         </style>
     </head>
-    <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen sm:items-center py-4 sm:pt-0">
-           <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="flex justify-center pt-8 sm:justify-start sm:pt-0" style=" color:#ffffff">
-                    <div class="mt-8  shadow sm:rounded-lg" style="background-color:#000000">
-                        <h3>WELCOME TO</h3>
-                        <h1>SUYADA's PORTFOLIO</h1>
-                        <a href="{{ url('/home') }}" class="justify-center text-sm" style="color:#000000;background-color:#ffffff">GET STARTED</a>
-                        <!--
-                        @if (Route::has('login'))
-                            @auth
-                                <a href="{{ url('/admin') }}" style="color:#000000;background-color:#ffffff">For suyada</a>
-                            @else
-                                <a href="{{ route('login') }}" style="color:#000000;background-color:#ffffff">Log in</a>
-                            @endauth
-                    
-                         @endif
-                         -->
-                    </div>
-                </div>
+    <body>
+            <p1>Test Admin page<br></p1>
 
-    
-            </div>
-        </div>
     </body>
 </html>

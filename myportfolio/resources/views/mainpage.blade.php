@@ -24,6 +24,9 @@
     </head>
     <body>
             <p1>Test Home page<br></p1>
-            <img src="https://media-exp1.licdn.com/dms/image/C5603AQH_FuoqWZG9Yg/profile-displayphoto-shrink_800_800/0/1635079231792?e=1650499200&v=beta&t=KuZqeh9spdD5TXE-WR7dacNt3mgHNsSZ5lC2QXZG-As">
+            <img src="https://media-exp1.licdn.com/dms/image/C5603AQH_FuoqWZG9Yg/profile-displayphoto-shrink_800_800/0/1635079231792?e=1650499200&v=beta&t=KuZqeh9spdD5TXE-WR7dacNt3mgHNsSZ5lC2QXZG-As" style="width:30%;height:30%;"><br>
+            <a href="https://www.linkedin.com/in/suyada-sinanun-177030224/">
+                Linked in profile
+            </a>
     </body>
 </html>

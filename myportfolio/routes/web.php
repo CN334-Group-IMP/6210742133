@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\AdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('mainpage');
 });
+
+/*Route::middleware(['auth:sanctum', 'verified'])->group(function(){
+    Route::get('/home',[AdminController::class, 'index'])->name('mainpage');
+});*/
