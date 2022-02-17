@@ -18,33 +18,12 @@
         <style>
             body {
                 font-family: 'Caveat Brush';
-                background-image: url("https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+                /*background-image: url("https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");*/
             }
         </style>
     </head>
-    <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen sm:items-center py-4 sm:pt-0">
-            @if (Route::has('login'))
-                
-                    @auth
-                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
-                    @endauth
-               
-            @endif
-
- 0           <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="flex justify-center pt-8 sm:justify-start sm:pt-0" style=" color:#ffffff">
-                    <div class="mt-8  shadow sm:rounded-lg" style="background-color:#000000">
-                        <h3>WELCOME TO</h3>
-                        <h1>SUYADA's PORTFOLIO</h1>
-                        <a href="{{ url('/home') }}" class="justify-center text-sm" style="color:#000000;background-color:#ffffff">GET STARTED</a>
-                    </div>
-                </div>
-
-    
-            </div>
-        </div>
+    <body>
+            <p1>Test Home page<br></p1>
+            <img src="https://media-exp1.licdn.com/dms/image/C5603AQH_FuoqWZG9Yg/profile-displayphoto-shrink_800_800/0/1635079231792?e=1650499200&v=beta&t=KuZqeh9spdD5TXE-WR7dacNt3mgHNsSZ5lC2QXZG-As">
     </body>
 </html>
