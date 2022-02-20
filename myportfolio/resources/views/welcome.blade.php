@@ -26,56 +26,147 @@
         <style>
             body {
                 font-family: 'Nunito', sans-serif;
-                background-image: url("https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+
             }
+            ::-webkit-scrollbar {
+                width: 10px;
+                background-color: #222222;
+                
+            }
+
+            /* Track */
+            ::-webkit-scrollbar-track {
+                background-color: #222222;
+                border-radius: 10px; 
+            }
+            
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+                border-radius: 10px; 
+                background-image: -webkit-linear-gradient(top, #FCD12A 0%, #222222 100%);
+                background-image: linear-gradient(to bottom, #FCD12A 0%,#222222 100%); }
+            }
+
         </style>
+        
+
     </head>
 
     <body class="antialiased">
-    <div>
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="{{ url('/') }}" style="color:white">SS'portfolio</a>
+        <div class="scrollbar scrollbar-sunny-morning">
+            <div class="force-overflow"></div>
+        </div>
+        <div>
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="{{ url('/') }}" style="color:white">SS'portfolio</a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li>
+                            @if (Route::has('login'))
+                                @auth
+                                    <a href="{{ url('/dashboard') }}">Dashboard</a>
+                                @else
+                                    <a href="{{ route('login') }}">For suyada</a>
+                                @endauth
+                            @endif
+                        </li>
+                    </ul>
                 </div>
-                <ul class="nav navbar-nav">
-                    <li>
-                        @if (Route::has('login'))
-                            @auth
-                                <a href="{{ url('/dashboard') }}">Dashboard</a>
-                            @else
-                                <a href="{{ route('login') }}">For suyada</a>
-                            @endauth
-                        @endif
-                    </li>
-                </ul>
-            </div>
-        </nav>             
-    </div>  
-        <div class="relative flex items-top justify-center max-h-screen sm:items-center py-4 sm:pt-0 " style="background-color:#f7fafc; margin-left:20%; margin-right:20%; margin-top:15%; padding-bottom:3%; padding-top:1%; border-radius:.8rem">
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="flex justify-center pt-8 sm:justify-start sm:pt-0" style="color:#A5815F">
-                    <h3>WELCOME TO</h3>
-                    <h1>SUYADA's PORTFOLIO</h1>
-                </div>
-                <p1>Test Home page<br></p1>
-                <img src="https://media-exp1.licdn.com/dms/image/C5603AQH_FuoqWZG9Yg/profile-displayphoto-shrink_800_800/0/1635079231792?e=1650499200&v=beta&t=KuZqeh9spdD5TXE-WR7dacNt3mgHNsSZ5lC2QXZG-As" style="width:30%;height:30%;"><br>
-                <a href="https://www.linkedin.com/in/suyada-sinanun-177030224/" target="_blank" rel="noopener noreferrer" >
-                    Linked in profile
-                </a>
-                <!-- profile info -->
-                <div>
+            </nav>             
+        </div>  
+        
+        <div class="info">           
+            <img src="https://media-exp1.licdn.com/dms/image/C5603AQH_FuoqWZG9Yg/profile-displayphoto-shrink_800_800/0/1635079231792?e=1650499200&v=beta&t=KuZqeh9spdD5TXE-WR7dacNt3mgHNsSZ5lC2QXZG-As" style="width:30%;height:30%;border-radius:50%;margin-left:35%; margin-top:5%;"><br>
+            <!-- profile info --> 
+            <div style="margin-left:35%;margin-top:2%;">
                 <tbody>
                     @foreach(auth()->user()->tasks as $task)
-                        <tr class="border-b hover:bg-orange-100">
-                            <td class="p-3 px-5">
+                        <tr>
+                            <td>
                                 {{$task->description}}
                             </td>
                         </tr>
                     @endforeach
-                    </tbody>
-                </div>
+                </tbody>
             </div>
+            <div class="bio" style="margin-left:35%; margin-top:2%;">
+                <p>I am an undergraduate student at Thammasat University - Thailand.<br>
+                Now I'm studying the bachelor of engineering in software engineering.<br>
+                Most of my interest is on the UX/UI designing, I like to do art things,<br>
+                and secondly on the front-end developing.</p>
+            </div> 
+            <div style="font-size:medium;margin-top:5%;margin-left:46%;margin-bottom: 5%;">
+                <button type="button" onclick="loadDoc()">My resume</button>
+                <h1>|</h1>
+                <a href="https://www.linkedin.com/in/suyada-sinanun-177030224/" target="_blank" rel="noopener noreferrer" >
+                    Linked in profile
+                </a>
+                <h1>|</h1>
+                <a href="https://arbum.art/u/iptsu__" target="_blank" rel="noopener noreferrer" >
+                    Arbum.art profile
+                </a>
+            </div>
+
         </div>
+
+        <!-- Footer -->
+        <footer class="text-center text-lg-start text-muted" style="background-color:#222222;padding-top:1%;padding-bottom:1%;">
+
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <!-- Content -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        <i class="fas fa-gem me-3"></i>E-mail
+                    </h6>
+                    <p>
+                        suyada.sina@gmail.com
+                    </p>
+                </div>
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        Phone Number
+                    </h6>
+                    <p><i class="fas fa-phone me-3"></i> + 66 85 994 2479</p>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2021 Copyright:
+            <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+
+        <script>
+            function loadDoc() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("demo").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", "ajax_info.txt", true);
+            xhttp.send();
+            }
+        </script>
+
     </body>
 </html>
+
